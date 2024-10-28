@@ -1,0 +1,13 @@
+@startuml
+class Kibbutz {
+- Vehicles[] arr_of_vehicles
++ void add_to_arr(Vehicles)
++ Vehicles[] Old_car_with_wheel()
++ int Light_vehicles_with_steering_wheel()
++ Vehicles[] arr_of_vehicles()
++ void setArr_of_vehicles(Vehicles[])
++ String toString()
+}
+
+
+@enduml

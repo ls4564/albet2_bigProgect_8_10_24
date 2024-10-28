@@ -1,0 +1,133 @@
+@startuml
+class Rib {
+- int meters
++ int meters()
++ void setMeters(int)
++ String toString()
+}
+
+
+class Cart {
+- int loading_time
++ double exhaust()
++ void hitchhikers()
++ int loading_time()
++ void setLoading_time(int)
++ String toString()
+}
+
+
+class Main {
++ {static} void main(String[])
++ {static} double daily_pollutants(Vehicles[])
++ {static} void show_noise_level(Vehicles[])
++ int amount_of_passengers(Vehicles[])
++ int Maximum_loading_time(Vehicles[])
+}
+
+class Regular {
+- int number_of_passengers
++ double exhaust()
++ void noise()
++ void hitchhikers()
++ int number_of_passengers()
++ void setNumber_of_passengers(int)
++ String toString()
+}
+
+
+class Heavy {
++ int how_many_trailers_the_vehicle_can_pull
++ double exhaust()
++ int how_many_trailers_the_vehicle_can_pull()
++ void setHow_many_trailers_the_vehicle_can_pull(int)
++ String toString()
+}
+
+
+class Truck {
+- double Maximum_loading_weight
++ double exhaust()
++ double Maximum_loading_weight()
++ void setMaximum_loading_weight(double)
++ String toString()
+}
+
+
+class Bicycle {
+- boolean There_is_a_basket
++ boolean There_is_a_basket()
++ void setThere_is_a_basket(boolean)
++ String toString()
+}
+
+
+class Light {
+- boolean There_is_an_engine
++ boolean There_is_an_engine()
++ void setThere_is_an_engine(boolean)
++ String toString()
+}
+
+
+class Wheel {
+~ String Tire_thickness
++ String Tire_thickness()
++ void setTire_thickness(String)
++ String toString()
+}
+
+
+class Tractor {
+- String Types_of_trailers
++ String Types_of_trailers()
++ void setTypes_of_trailers(String)
++ String toString()
+}
+
+
+class Kibbutz {
+- Vehicles[] arr_of_vehicles
++ void add_to_arr(Vehicles)
++ Vehicles[] Old_car_with_wheel()
++ int Light_vehicles_with_steering_wheel()
++ Vehicles[] arr_of_vehicles()
++ void setArr_of_vehicles(Vehicles[])
++ String toString()
+}
+
+
+class Vehicles {
+- int num_of_car
+- int age_of_car
+- int amount_of_wheels
+~ boolean Steering_shape
+- int pollutant_emissions_per_minute
++ double exhaust()
++ void noise()
++ int age_of_car()
++ int amount_of_wheels()
++ boolean Steering_shape()
++ int pollutant_emissions_per_minute()
++ int num_of_car()
++ void setNum_of_car(int)
++ void setAge_of_car(int)
++ void setAmount_of_wheels(int)
++ void setSteering_shape(boolean)
++ void setPollutant_emissions_per_minute(int)
++ String toString()
+}
+
+
+
+
+Regular <|-- Rib
+Light <|-- Cart
+Vehicles <|-- Regular
+Vehicles <|-- Heavy
+Heavy <|-- Truck
+Light <|-- Bicycle
+Vehicles <|-- Light
+Truck <|-- Wheel
+Heavy <|-- Tractor
+@enduml
